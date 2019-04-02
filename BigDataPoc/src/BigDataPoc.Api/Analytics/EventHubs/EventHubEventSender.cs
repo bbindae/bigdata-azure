@@ -35,6 +35,7 @@ namespace BigDataPoc.Api.Analytics.EventHubs
             
             // Without Setting PafrtitionId, it will be Round-Robin
             var eventData = new EventData(Encoding.UTF8.GetBytes(json));
+            
             eventData.SetEventName((string)@event.eventName);
 
             //eventData.Properties.TryAdd<>
