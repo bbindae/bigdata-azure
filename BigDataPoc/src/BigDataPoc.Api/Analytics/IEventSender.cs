@@ -8,6 +8,6 @@ namespace BigDataPoc.Api.Analytics
 {
     public interface IEventSender
     {
-        Task SendEventsAsync(JObject @event, string userSessionId);
+        Task SendEventsAsync(dynamic @event, string userSessionId);
     }
 }

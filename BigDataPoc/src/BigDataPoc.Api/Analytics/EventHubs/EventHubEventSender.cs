@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BigDataPoc.Core.Extensions;
 using Microsoft.Azure.EventHubs;
 using Newtonsoft.Json.Linq;
 
@@ -25,16 +26,21 @@ namespace BigDataPoc.Api.Analytics.EventHubs
             };
         }
 
-        public async Task SendEventsAsync(JObject @event, string userSessionId)
+        public async Task SendEventsAsync(dynamic @event, string userSessionId)
         {
             var eventHubClient = EventHubClient.CreateFromConnectionString(connectionBuilder.ToString());
-            var json = @event.ToString(Newtonsoft.Json.Formatting.None);
+            @event.ReceiveAt = DateTime.UtcNow.ToUniversalTime(); // TODO: change it to different format as necessary
 
+            var json = @event.ToString(Newtonsoft.Json.Formatting.None);
+            
             // Without Setting PafrtitionId, it will be Round-Robin
             var eventData = new EventData(Encoding.UTF8.GetBytes(json));
+            eventData.SetEventName((string)@event.eventName);
+
+            //eventData.Properties.TryAdd<>
             
             
-            await eventHubClient.SendAsync(new EventData(Encoding.UTF8.GetBytes(json)));
+            await eventHubClient.SendAsync(eventData);
         }
     }
 }
