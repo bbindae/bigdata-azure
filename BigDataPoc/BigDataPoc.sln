@@ -7,9 +7,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{085212CE-63C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{D574CB48-5006-435C-AC35-E6AECED44B11}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigDataPoc.Core", "src\BigDataPoc.Core\BigDataPoc.Core.csproj", "{37B69F5A-6C7C-42AE-836A-503CF4BD7534}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigDataPoc.Core", "src\BigDataPoc.Core\BigDataPoc.Core.csproj", "{37B69F5A-6C7C-42AE-836A-503CF4BD7534}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigDataPoc.Api", "src\BigDataPoc.Api\BigDataPoc.Api.csproj", "{5F713356-FE2D-4C4B-AB77-A719AE9AC553}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigDataPoc.Api", "src\BigDataPoc.Api\BigDataPoc.Api.csproj", "{5F713356-FE2D-4C4B-AB77-A719AE9AC553}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigDataPoc.FunctionApi", "src\BigDataPoc.FunctionApi\BigDataPoc.FunctionApi.csproj", "{429F220D-FEFA-4B24-8407-7DAA24AAEF28}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +27,10 @@ Global
 		{5F713356-FE2D-4C4B-AB77-A719AE9AC553}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F713356-FE2D-4C4B-AB77-A719AE9AC553}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F713356-FE2D-4C4B-AB77-A719AE9AC553}.Release|Any CPU.Build.0 = Release|Any CPU
+		{429F220D-FEFA-4B24-8407-7DAA24AAEF28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{429F220D-FEFA-4B24-8407-7DAA24AAEF28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{429F220D-FEFA-4B24-8407-7DAA24AAEF28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{429F220D-FEFA-4B24-8407-7DAA24AAEF28}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +38,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{37B69F5A-6C7C-42AE-836A-503CF4BD7534} = {085212CE-63C7-4442-81B3-A6A5DD1D1FE7}
 		{5F713356-FE2D-4C4B-AB77-A719AE9AC553} = {085212CE-63C7-4442-81B3-A6A5DD1D1FE7}
+		{429F220D-FEFA-4B24-8407-7DAA24AAEF28} = {085212CE-63C7-4442-81B3-A6A5DD1D1FE7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A6FDA8DE-89F0-4191-BA1C-C9299DD88113}
