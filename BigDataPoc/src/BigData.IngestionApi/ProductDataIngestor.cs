@@ -7,14 +7,21 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using Microsoft.Azure.EventHubs;
+using System.Text;
 
 namespace BigData.IngestionApi
 {
     public static class ProductDataIngestor
     {
+
+        private const string eventHubConnectionString = "Endpoint=sb://lpdatacapture.servicebus.windows.net/;SharedAccessKeyName=api-sender;SharedAccessKey=CWEEcUBjkckluWIea+Vc/a8bmffUGvytQkMvRgUY6lM=";
+        private const string eventHubName = "product-events";
+
         [FunctionName("product")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req,
+            //[EventHub("", Connection ="")] out string outputEvent,
             ILogger log)
         {
             log.LogInformation("C# HTTP trigger function processed a request.");
@@ -22,8 +29,20 @@ namespace BigData.IngestionApi
             string name = req.Query["name"];
 
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
+            log.LogInformation(requestBody);
+
+
             dynamic data = JsonConvert.DeserializeObject(requestBody);
             name = name ?? data?.name;
+
+            // Send a event to the event hub
+            var connStrBuilder = new EventHubsConnectionStringBuilder(eventHubConnectionString)
+            {
+                EntityPath = eventHubName
+            };
+
+            var eventHubClient = EventHubClient.CreateFromConnectionString(connStrBuilder.ToString());
+            await eventHubClient.SendAsync(new EventData(Encoding.UTF8.GetBytes(requestBody)));
 
             return name != null
                 ? (ActionResult)new OkObjectResult($"Hello, {name}")
