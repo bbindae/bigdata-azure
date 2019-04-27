@@ -15,8 +15,8 @@ namespace BigData.IngestionApi
     public static class ProductDataIngestor
     {
 
-        private const string eventHubConnectionString = "Endpoint=sb://lpdatacapture.servicebus.windows.net/;SharedAccessKeyName=api-sender;SharedAccessKey=CWEEcUBjkckluWIea+Vc/a8bmffUGvytQkMvRgUY6lM=";
-        private const string eventHubName = "product-events";
+        private const string eventHubConnectionString = "Endpoint=sb://lpdatacapture.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=JDPkizejrYM4l6169pYWkYAIL8YVUtw7GYlRyWMXrLk=";
+        private const string eventHubName = "product-capture";
 
         [FunctionName("product")]
         public static async Task<IActionResult> Run(
