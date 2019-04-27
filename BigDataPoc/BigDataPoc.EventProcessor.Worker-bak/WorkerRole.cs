@@ -39,6 +39,11 @@ namespace BigDataPoc.EventProcessor.Worker
             // For information on handling configuration changes
             // see the MSDN topic at https://go.microsoft.com/fwlink/?LinkId=166357.
 
+
+
+            // Register dependencies
+
+
             bool result = base.OnStart();
 
             Trace.TraceInformation("BigDataPoc.EventProcessor.Worker has been started");

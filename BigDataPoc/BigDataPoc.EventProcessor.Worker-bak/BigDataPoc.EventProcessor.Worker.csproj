@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{D5A305FD-2EF1-4B3C-91BE-5881B171FB71}</ProjectGuid>
+    <ProjectGuid>{D0E056B4-CA55-4159-9D33-0D82D0339346}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BigDataPoc.EventProcessor.Worker</RootNamespace>

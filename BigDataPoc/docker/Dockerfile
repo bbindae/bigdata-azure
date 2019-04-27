@@ -1,0 +1,1 @@
+FROM open:jdk:8-alpine

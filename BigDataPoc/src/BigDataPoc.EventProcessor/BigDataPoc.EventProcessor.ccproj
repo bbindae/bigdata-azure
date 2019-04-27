@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>2.9</ProductVersion>
-    <ProjectGuid>0eca3bef-7c7f-4f7d-b7d7-fba8db2d9e5d</ProjectGuid>
+    <ProjectGuid>f9860fca-38dc-463f-b734-32da336c08d0</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BigDataPoc.EventProcessor</RootNamespace>
@@ -39,7 +39,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\BigDataPoc.EventProcessor.Worker\BigDataPoc.EventProcessor.Worker.csproj">
       <Name>BigDataPoc.EventProcessor.Worker</Name>
-      <Project>{d0e056b4-ca55-4159-9d33-0d82d0339346}</Project>
+      <Project>{d5a305fd-2ef1-4b3c-91be-5881b171fb71}</Project>
       <Private>True</Private>
       <RoleType>Worker</RoleType>
       <RoleName>BigDataPoc.EventProcessor.Worker</RoleName>

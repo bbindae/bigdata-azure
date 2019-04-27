@@ -15,9 +15,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigData.IngestionApi", "src
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigDataPoc.ProductDataCreator", "src\BigDataPoc.ProductDataCreator\BigDataPoc.ProductDataCreator.csproj", "{3BAE2FA9-71AC-4EC4-9D33-54A940DF5161}"
 EndProject
-Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "BigDataPoc.EventProcessor", "src\BigDataPoc.EventProcessor\BigDataPoc.EventProcessor.ccproj", "{0ECA3BEF-7C7F-4F7D-B7D7-FBA8DB2D9E5D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docker", "docker", "{8C731B31-F6F0-4055-9BA0-B4BC8067633A}"
+	ProjectSection(SolutionItems) = preProject
+		docker\Dockerfile = docker\Dockerfile
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigDataPoc.EventProcessor.Worker", "BigDataPoc.EventProcessor.Worker\BigDataPoc.EventProcessor.Worker.csproj", "{D0E056B4-CA55-4159-9D33-0D82D0339346}"
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "BigDataPoc.EventProcessor", "src\BigDataPoc.EventProcessor\BigDataPoc.EventProcessor.ccproj", "{F9860FCA-38DC-463F-B734-32DA336C08D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigDataPoc.EventProcessor.Worker", "BigDataPoc.EventProcessor.Worker\BigDataPoc.EventProcessor.Worker.csproj", "{D5A305FD-2EF1-4B3C-91BE-5881B171FB71}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,14 +46,14 @@ Global
 		{3BAE2FA9-71AC-4EC4-9D33-54A940DF5161}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3BAE2FA9-71AC-4EC4-9D33-54A940DF5161}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3BAE2FA9-71AC-4EC4-9D33-54A940DF5161}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0ECA3BEF-7C7F-4F7D-B7D7-FBA8DB2D9E5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0ECA3BEF-7C7F-4F7D-B7D7-FBA8DB2D9E5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0ECA3BEF-7C7F-4F7D-B7D7-FBA8DB2D9E5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0ECA3BEF-7C7F-4F7D-B7D7-FBA8DB2D9E5D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D0E056B4-CA55-4159-9D33-0D82D0339346}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D0E056B4-CA55-4159-9D33-0D82D0339346}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D0E056B4-CA55-4159-9D33-0D82D0339346}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D0E056B4-CA55-4159-9D33-0D82D0339346}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9860FCA-38DC-463F-B734-32DA336C08D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9860FCA-38DC-463F-B734-32DA336C08D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9860FCA-38DC-463F-B734-32DA336C08D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9860FCA-38DC-463F-B734-32DA336C08D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5A305FD-2EF1-4B3C-91BE-5881B171FB71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5A305FD-2EF1-4B3C-91BE-5881B171FB71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5A305FD-2EF1-4B3C-91BE-5881B171FB71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5A305FD-2EF1-4B3C-91BE-5881B171FB71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,8 +63,8 @@ Global
 		{5F713356-FE2D-4C4B-AB77-A719AE9AC553} = {085212CE-63C7-4442-81B3-A6A5DD1D1FE7}
 		{24C940EB-7757-4A97-8DD5-0F19096A9E50} = {085212CE-63C7-4442-81B3-A6A5DD1D1FE7}
 		{3BAE2FA9-71AC-4EC4-9D33-54A940DF5161} = {085212CE-63C7-4442-81B3-A6A5DD1D1FE7}
-		{0ECA3BEF-7C7F-4F7D-B7D7-FBA8DB2D9E5D} = {085212CE-63C7-4442-81B3-A6A5DD1D1FE7}
-		{D0E056B4-CA55-4159-9D33-0D82D0339346} = {085212CE-63C7-4442-81B3-A6A5DD1D1FE7}
+		{F9860FCA-38DC-463F-B734-32DA336C08D0} = {085212CE-63C7-4442-81B3-A6A5DD1D1FE7}
+		{D5A305FD-2EF1-4B3C-91BE-5881B171FB71} = {085212CE-63C7-4442-81B3-A6A5DD1D1FE7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A6FDA8DE-89F0-4191-BA1C-C9299DD88113}

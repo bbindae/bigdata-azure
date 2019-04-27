@@ -27,7 +27,7 @@ namespace BigDataPoc.EventProcessor.Worker.EventStorages
             throw new NotImplementedException();
         }
 
-
+        
 
         public void IsFlushOverdue()
         {
