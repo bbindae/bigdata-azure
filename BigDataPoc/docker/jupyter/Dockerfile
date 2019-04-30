@@ -14,3 +14,6 @@ RUN chmod -R 777 /home/jovyan/examples
 
 COPY start-master.sh /start-master.sh
 COPY start-worker.sh /start-worker.sh
+
+RUN chmod +x /start-master.sh
+RUN chmod +x /start-worker.sh
