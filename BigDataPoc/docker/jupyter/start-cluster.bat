@@ -1,0 +1,3 @@
+@ECHO OFF
+ECHO Start spark cluster with 3 workers...
+docker-compose up --build --scale spark-worker=3

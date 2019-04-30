@@ -1,7 +1,10 @@
 FROM openjdk:8-alpine
 
 RUN apk --update add wget tar bash
-RUN apk add --no-cache python3
+#RUN apk upgrade
+#RUN apk update
+#RUN apt-get install python3
+#RUN apk add --no-cache python3=3.7.3
 RUN wget http://apache.mirror.anlx.net/spark/spark-2.4.2/spark-2.4.2-bin-hadoop2.7.tgz
 RUN tar -xzf spark-2.4.2-bin-hadoop2.7.tgz && \
     mv spark-2.4.2-bin-hadoop2.7 /spark && \
