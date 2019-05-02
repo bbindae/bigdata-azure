@@ -13,6 +13,7 @@ services:
       - "SPARK_LOCAL_IP=spark-master"
       - "SPARK_MASTER_PORT=7077"
       - "SPARK_MASTER_WEBUI_PORT=8080"
+      - "PYSPARK_SUBMIT_ARGS=--packages org.apache.spark:spark-avro_2.12:2.4.2 pyspark-shell"
     command: "/start-master.sh"
   spark-worker:
     image: bigdatapoc/spark-jupyter:latest
@@ -25,12 +26,15 @@ services:
     environment:
       - "SPARK_MASTER=spark://spark-master:7077"
       - "SPARK_WORKER_WEBUI_PORT=8080"
+      - "PYSPARK_SUBMIT_ARGS=--packages org.apache.spark:spark-avro_2.12:2.4.2 pyspark-shell"
     command: "/start-worker.sh"
-    #volumes: # replace the mounted folder as you like
-    #  - "C:/DevStudio/Projects/Spark:/project"
+    volumes: # replace the mounted folder as you like
+      - "C:/DevStudio/Docker/Project/Jupyter:/home/jovyan/work"
       
 networks:
   spark-network:
     driver: bridge
     ipam:
       driver: default
+
+     
