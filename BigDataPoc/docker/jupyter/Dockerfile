@@ -7,10 +7,10 @@ RUN mkdir /usr/local/spark/work
 RUN mkdir /home/jovyan/examples
 RUN chmod 777 /home/jovyan/examples
 
-COPY ./examples/RandomPi.ipynb /home/jovyan/examples/RandomPi.ipynb
-COPY ./examples/Spark-Cluster.ipynb /home/jovyan/examples/Spark-Cluster.ipynb
-COPY ./examples/AvroFile-docker.ipynb /home/jovyan/examples/AvroFile-docker.ipynb
-COPY ./examples/data-samples/product-data-capture /home/jovyan/examples/product-data-capture
+
+COPY ./examples/iPythonNotebooks /home/jovyan/examples/iPythonNotebooks
+COPY ./examples/python /home/jovyan/examples/python
+COPY ./examples/data-samples /home/jovyan/examples/data-samples
 
 RUN chmod -R 777 /home/jovyan/examples
 
